@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body onload="animation()">
+    <h1>Calculadora <span>Javascript</span></h1>
+    
+    <div id="superior">
+      <div id="resultado"></div>
+      <div id="botoes">
+        <button value="²" onclick="operação(this.value)">x²</button>
+        <button onclick="zera()">CE</button>
+        <button onclick="apaga()">C</button>
+        <input type="button" value="/" onclick="operação(this.value)">
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="esquerda">
+        <div id="botoes" class="menos">
+          <div>
+            <input type="button" value="7" onclick="entrada(this.value)">
+            <input type="button" value="8" onclick="entrada(this.value)">
+            <input type="button" value="9" onclick="entrada(this.value)">
+          </div>
+        </div>
+        <div id="botoes" class="inferiores">
+          <div>
+            <input type="button" value="4" onclick="entrada(this.value)">
+            <input type="button" value="5" onclick="entrada(this.value)">
+            <input type="button" value="6" onclick="entrada(this.value)">
+          </div>
+        </div>
+        <div id="botoes" class="mais">
+          <div>
+            <input type="button" value="1" onclick="entrada(this.value)">
+            <input type="button" value="2" onclick="entrada(this.value)">
+            <input type="button" value="3" onclick="entrada(this.value)">
+          </div>
+        </div>
+        <div id="botoes" class="mais">
+          <div>
+            <input type="button" value="0" id="bzero" onclick="entrada(this.value)">
+            <input type="button" value="," id="vírgula" onclick="virgula()">
+          </div>
+        </div>
+      </div>
+
+      <div id="direita">
+        <div>
+          <input type="button" value="x" onclick="operação(this.value)">
+        </div>
+        <div>
+          <input type="button" value="-" onclick="operação(this.value)">
+        </div>
+        <div>
+          <input type="button" value="+" onclick="operação(this.value)">
+        </div>
+        <div>
+          <input type="button" value="=" id="igual" onclick="result()">
+        </div>
+      </div>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
